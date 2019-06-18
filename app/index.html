@@ -1,0 +1,46 @@
+<html lang="en" ng-app="App" >
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="lib/angular-material/angular-material.css">
+
+  <!-- Custom CSS -->  
+  <link rel="stylesheet" href="app.css"></link>
+  <link rel="stylesheet" href="dashboard/dashboard.template.css"></link>
+
+</head>
+
+<body>
+
+  <!-- Angular.js -->
+  <script src="lib/angular/angular.js"></script>  
+
+  <!-- Angular.js @Routing -->
+  <script src="lib/angular-route/angular-route.js"></script>
+
+  <!-- Angular Material Library -->  
+  <script src="lib/angular-material/angular-material.js"></script>
+  <script src="lib/angular-aria/angular-aria.js"></script>
+  <script src="lib/angular-messages/angular-messages.js"></script>
+  <script src="lib/angular-animate/angular-animate.js"></script>  
+  
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+
+  <!-- Dashboard Module  -->
+  <script src="dashboard/dashboard.module.js"></script>
+  <script src="dashboard/dashboard.component.js"></script>  
+
+  <div ng-view>
+
+  </div>
+
+</body>
+
+</html>
+
+<!--
+Copyright 2016-2019 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be found in the LICENSE file at https://material.angularjs.org/latest/license.
+-->

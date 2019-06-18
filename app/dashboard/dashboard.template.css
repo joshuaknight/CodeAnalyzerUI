@@ -1,0 +1,129 @@
+
+.info-error{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    font-size: 19px;
+    text-align: center;
+}
+
+.lang-card{
+    cursor: pointer;
+    transition: .5s cubic-bezier(.215,.61,.355,1);
+    outline: 0;
+}
+
+.lang-card:hover{
+    transform: scale(1.05);
+}
+
+.lang-card.active{
+    background: #4955ea1c;
+}
+
+.logo{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.editor-toolbar{
+    min-height: 10px;
+    height: 30px;      
+}
+
+.editor-toolbar{
+    background: #fff !important;
+    border-bottom:1px solid #cccccc45;
+}
+
+/* .editor-toolbar.python{
+    background: #3572a4;
+}
+
+.editor-toolbar.c{
+    background: #6bc219;
+}
+
+.editor-toolbar.cpp{
+    background: #659ad2;
+}
+
+.editor-toolbar.ruby{
+    background: #f9827c;
+}
+
+.editor-toolbar.css{
+    background: rgb(68, 150, 230);
+}
+
+.editor-toolbar.html{
+    background:rgb(230, 99, 42);
+}
+
+.editor-toolbar.php{
+    background: rgb(136, 146, 190);
+} */
+
+.editor-toolbar .selected-lang{
+    font-size: 14px;
+    color: gray;
+    text-transform: capitalize;
+}
+
+.editor-toolbar .sm-logo{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.editor-box{
+    height: 50vh;
+    max-height: 50vh;
+    overflow-y: auto;
+    width: 100%;
+    resize: none;
+    border: 1px solid #ccc;
+}
+
+.editor-box:focus {
+    outline: 0;
+}
+
+.analyze-btn{
+    float: right;
+    background: orange !important;
+    color: white !important;
+}
+
+.analyze-loading{
+    float: right;
+    color:orange;
+}
+
+.output-box{
+    height: calc(55vh + 30px);
+}
+
+.output-box .item{
+    font-size: 13px;
+    cursor: default;
+    color: #fff;
+    padding-top: 11px;
+    padding-left: 11px;
+}
+
+.output-info-msg{
+    font-size: 14px;
+    padding-left: 3px;
+    color: gray;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.list-item-wrapper{
+    max-height: 52vh;    
+    overflow-y: auto;
+    height: 100%;
+}

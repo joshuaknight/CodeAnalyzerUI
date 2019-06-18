@@ -1,0 +1,71 @@
+
+<md-progress-linear ng-if="!finished_loading" md-mode="indeterminate"></md-progress-linear>
+
+<div ng-if="error_loading_page">
+    <div class="info-error">
+        Error loading page please try again after sometime.....
+    </div>
+</div>
+
+<div ng-if="finished_loading" >
+
+    <div layout="row" layout-align="space-around center">
+        <md-card ng-class="{active : selected_lang == lang}" ng-click="change_lang(lang)" class="lang-card"
+            md-theme-watch ng-repeat="lang in available_lang">
+            <md-card-title>
+                <md-card-title-media>
+                    <div style="background-image:url(assets/img/{{lang}}-logo.svg)" class="logo md-media-md card-media">
+                    </div>
+                </md-card-title-media>
+            </md-card-title>
+        </md-card>
+    </div>
+
+    <div layout="row">
+        <md-card flex="66">
+            <md-toolbar class="editor-toolbar {{selected_lang}}">
+                <div class="md-toolbar-tools">
+                    <span class="sm-logo" style="background-image:url(assets/img/{{selected_lang}}-logo.svg)"></span>
+                    <span class="selected-lang">{{selected_lang}}</span>
+                </div>
+            </md-toolbar>
+
+            <md-card-content flex layout-padding>
+                
+                <textarea name="editor_data" class="editor-box" ng-model="$ctrl.editor_data">
+
+                </textarea>
+                
+            </md-card-content>
+
+        </md-card>
+
+        <div flex="33">
+
+            <md-card style="background:black;">
+                <md-card-content style="padding:0px;">
+                    <div class="output-box">
+                        
+                        <md-subheader class="md-no-sticky">Output Analysis</md-subheader>
+                        <div class="list-item-wrapper">
+                            <div class="item" ng-repeat="msg in message_list;" >
+                                {{$index + 1}}. {{msg}}
+                            </div>                                                      
+                        </div>     
+                        <div ng-if="message_list.length == 0" class="output-info-msg">
+                            No syntax errors found.
+                        </div>                   
+                    </div>
+                </md-card-content>
+            </md-card>
+        </div>
+
+    </div>
+
+    <div layout="row">
+        <div flex="66">
+            <md-button ng-if="!analysing_code" ng-click="analyze_code()" class="md-raised analyze-btn">Analyze</md-button>
+            <md-progress-circular class="md-warn md-hue-3 analyze-loading" ng-if="analysing_code" md-mode="indeterminate"></md-progress-circular>
+        </div>
+    </div>
+</div>
